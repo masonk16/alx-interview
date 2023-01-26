@@ -8,13 +8,20 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    
-    a = []
+
+    triangle_list = [0] * n
 
     for i in range(n):
-        a.append([])
-        a[i].append(1)
-        for j in range (1,i):
-            a[i].append(a[i-1][j-1]+a[i-1][j])
+                new_list = [0] * (i+1)
+        new_list[0] = 1
+        new_list[len(new_list) - 1] = 1
 
-    return a
+        for j in range(1, i):
+            if j > 0 and j < len(new_list):
+                a = triangle_list[i - 1][j]
+                b = triangle_list[i - 1][j - 1]
+                new_list[j] = a + b
+
+        triangle_list[i] = new_list
+
+    return triangle_list
