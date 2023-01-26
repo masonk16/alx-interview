@@ -12,7 +12,7 @@ def pascal_triangle(n):
     triangle_list = [0] * n
 
     for i in range(n):
-                new_list = [0] * (i+1)
+        new_list = [0] * (i + 1)
         new_list[0] = 1
         new_list[len(new_list) - 1] = 1
 
