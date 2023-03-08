@@ -94,3 +94,14 @@ The N queens puzzle is the challenge of placing N non-attacking queens on an N×
 Read: [Queen](https://intranet.alxswe.com/rltoken/ghWqI1wvx6g-Ul7nrufMKA), [Backtracking](https://intranet.alxswe.com/rltoken/-hgZbgRFkwmxaKnLnCIuEQ)
 
 <hr>
+
+### Directory: [0x06-starwars_api](https://github.com/masonk16/alx-interview/tree/main/0x06-starwars_api)
+
+Write a script that prints all characters of a Star Wars movie:
+
+* The first positional argument passed is the Movie ID - example: `3` = “Return of the Jedi”
+* Display one character name per line **in the same order as the “characters” list in the `/films/` endpoint**
+* You must use the [Star wars API](https://swapi-api.alx-tools.com/)
+* You must use the `request` module
+
+<hr>
