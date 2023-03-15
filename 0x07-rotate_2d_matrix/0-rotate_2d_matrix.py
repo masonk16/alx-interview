@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Rotate 2D Matrix.
+Rotate 2D Matrix Coding Challenge.
 """
 
 
@@ -10,17 +10,18 @@ def rotate_2d_matrix(matrix):
     :param matrix: non-empty, n x n 2D matrix.
     :return:
     """
-    # Construct an output matrix with the correct dimensions, i.e.
-    # # of rows and columns are switched.
-    output = [[0 for _ in range(len(matrix))] for _ in range(len(matrix[0]))]
+    # list(zip(*matrix[::-1]))
 
-    # Reverse the matrix, row-wise.
-    for i in range(int(len(matrix) / 2)):
-        matrix[i], matrix[len(matrix)-1-i] = matrix[len(matrix)-1-i], matrix[i]
+    temp_matrix = []
 
-    # Switch the x and y coordinates.
+    column = len(matrix) - 1
+
+    for column in range(len(matrix)):
+        temp = []
+        for row in range(len(matrix) - 1, -1, -1):
+            temp.append(matrix[row][column])
+        temp_matrix.append(temp)
+
     for i in range(len(matrix)):
-        for j in range(len(matrix[0])):
-            output[j][i] = matrix[i][j]
-
-    print(output)
+        for j in range(len(matrix)):
+            matrix[i][j] = temp_matrix[i][j]
